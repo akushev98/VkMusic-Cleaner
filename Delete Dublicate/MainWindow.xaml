@@ -1,0 +1,91 @@
+﻿<Window x:Class="Delete_Dublicate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delete_Dublicate"
+        mc:Ignorable="d"
+        Title="VkMusic Cleaner" Height="720" Width="630"
+        Loaded="MainForm_Load">
+    <StackPanel
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+        <StackPanel            
+          HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button Content="Load music list"                 
+                VerticalAlignment="Top" 
+                Height="40" 
+                FontFamily="Century Gothic" 
+                FontSize="32" 
+                Padding="8"
+                Style ="{StaticResource BtnStyle}" 
+                Click="Button_Click" Margin="4" Width="300"
+                >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="GetToken"                 
+            VerticalAlignment="Top" 
+            Height="40" 
+            FontFamily="Century Gothic" 
+            FontSize="32" 
+            Padding="8"
+            Style ="{StaticResource BtnStyle}" 
+            Click="Button_GetToken_Click"
+                Margin="4" Width="300"
+                >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
+
+        <StackPanel
+            HorizontalAlignment="Center"
+            Orientation="Horizontal"
+            Margin="4">
+            <Label
+                Content="Enter id:"
+                FontSize="16"/>
+            <TextBox
+            x:Name="UserId"
+            FontSize="20"            
+            TextAlignment="Center"                
+            Text="80283168"
+            Width="447" Height="32"/>
+            <Button
+                x:Name="OkBtn"
+                Content="Search"
+                Width="93"
+                 Style ="{StaticResource BtnStyle}"   
+                Click="Button_GetInformation_Click_1"/>
+        </StackPanel>
+
+        <Label 
+            x:Name="UserName"
+            Content="UserName"
+            HorizontalContentAlignment="Center"
+            FontSize="20"/>
+
+        <ListView 
+            x:Name="MusicTable" 
+            Height="545"
+            Margin="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
+</Window>
